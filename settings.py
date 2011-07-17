@@ -44,11 +44,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # corresponding output. Helps a lot with print-debugging.
 TEST_RUNNER = 'djangotoolbox.test.CapturingTestSuiteRunner'
 
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'static')
+MEDIA_URL = '/static/'
+
 ADMIN_MEDIA_PREFIX = '/media/admin/'
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
-
-STATIC_DOC_ROOT = os.path.join(os.path.dirname(__file__), 'static')
-
-STATIC_URL = '/static/'
 
 ROOT_URLCONF = 'urls'
